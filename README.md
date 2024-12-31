@@ -298,6 +298,32 @@ We can have all sorts of fun within the established boundaries of this relations
     </div>
 ```
 
+Oh, and if you're setting multiple `counter-value` variables with the same counter source, you can just use one `directive` instead.
+
+```html
+  <div>
+    <output data-counter-value style="--counter: global-div-counter;"></output>
+    <!-- var 1, implicitly on parent -->
+    <output data-counter-value="3" style="--counter: global-div-counter;"></output>
+    <!-- var 3, explicitly on an ancestor -->
+    <output data-counter-value="8" style="--counter: global-div-counter;"></output>
+    <!-- var 8, explicitly on :root, giving the whole document access to a variable var(--counter-value\\8) === 11 -->
+    11
+  </div>
+```
+
+becomes
+
+```html
+  <div>
+    <output data-counter-value="1 3 8" style="--counter: global-div-counter;"></output>
+    <!-- var 1, implicitly on parent -->
+    <!-- var 3, explicitly on an ancestor -->
+    <!-- var 8, explicitly on :root, giving the whole document access to a variable var(--counter-value\\8) === 11 -->
+    11
+  </div>
+```
+
 Have fun!
 
 <!--
