@@ -1,0 +1,25 @@
+{
+  "name": "css-counter-value",
+  "version": "1.0.0",
+  "description": "Convert CSS counter() values to integers without JavaScript",
+  "main": "counter-value.css",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/propjockey/css-counter-value.git"
+  },
+  "keywords": [
+    "css",
+    "counter",
+    "calc",
+    "convert"
+  ],
+  "author": "Jane Ori",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/propjockey/css-counter-value/issues"
+  },
+  "homepage": "https://github.com/propjockey/css-counter-value#readme"
+}

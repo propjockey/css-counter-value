@@ -1,0 +1,277 @@
+/* css-counter-value
+// BSD 2-Clause License
+// Copyright (c) Jane Ori, PropJockey, 2024
+*/
+
+@counter-style --counter-value { system: additive; additive-symbols: 1 ".", 0 ""; }
+@property --counter-value\\1 { syntax: "<integer>"; inherits: true; initial-value: 0; }
+@property --counter-value\\2 { syntax: "<integer>"; inherits: true; initial-value: 0; }
+@property --counter-value\\3 { syntax: "<integer>"; inherits: true; initial-value: 0; }
+@property --counter-value\\4 { syntax: "<integer>"; inherits: true; initial-value: 0; }
+@property --counter-value\\5 { syntax: "<integer>"; inherits: true; initial-value: 0; }
+@property --counter-value\\6 { syntax: "<integer>"; inherits: true; initial-value: 0; }
+@property --counter-value\\7 { syntax: "<integer>"; inherits: true; initial-value: 0; }
+@property --counter-value\\8 { syntax: "<integer>"; inherits: true; initial-value: 0; }
+@keyframes --counter-value_kf1 { 0% { --counter-value\\1: 120; } 100% { --counter-value\\1: 0; } }
+@keyframes --counter-value_kf2 { 0% { --counter-value\\2: 120; } 100% { --counter-value\\2: 0; } }
+@keyframes --counter-value_kf3 { 0% { --counter-value\\3: 120; } 100% { --counter-value\\3: 0; } }
+@keyframes --counter-value_kf4 { 0% { --counter-value\\4: 120; } 100% { --counter-value\\4: 0; } }
+@keyframes --counter-value_kf5 { 0% { --counter-value\\5: 120; } 100% { --counter-value\\5: 0; } }
+@keyframes --counter-value_kf6 { 0% { --counter-value\\6: 120; } 100% { --counter-value\\6: 0; } }
+@keyframes --counter-value_kf7 { 0% { --counter-value\\7: 120; } 100% { --counter-value\\7: 0; } }
+@keyframes --counter-value_kf8 { 0% { --counter-value\\8: 120; } 100% { --counter-value\\8: 0; } }
+
+:where(
+  :has(> [data-counter-value=""]),
+  :has(> [data-counter-value$=":on-nth-parent(1)"]),
+  :has(> * > [data-counter-value$=":on-nth-parent(2)"]),
+  :has(> * > * > [data-counter-value$=":on-nth-parent(3)"]),
+  :has(> * > * > * > [data-counter-value$=":on-nth-parent(4)"]),
+  :has(> * > * > * > * > [data-counter-value$=":on-nth-parent(5)"])
+) {
+  --__cvat_1: initial;
+  --__cvat_2: initial;
+  --__cvat_1and2_elseNeither: var(--__cvat_1), var(--__cvat_2);
+  --__cvat_1and2_elseEither_elseNeither: var(--__cvat_1and2_elseNeither, var(--__cvat_1, var(--__cvat_2)));
+  --__cvat_3: initial;
+  --__cvat_4: initial;
+  --__cvat_3and4_elseNeither: var(--__cvat_3), var(--__cvat_4);
+  --__cvat_3and4_elseEither_elseNeither: var(--__cvat_3and4_elseNeither, var(--__cvat_3, var(--__cvat_4)));
+  --__cvat_1ao2and3ao4_elseNone: var(--__cvat_1and2_elseEither_elseNeither), var(--__cvat_3and4_elseEither_elseNeither);
+  --__cvat_1ao2and3ao4_elseEither_elseNone: var(
+    --__cvat_1ao2and3ao4_elseNone,
+    var(
+      --__cvat_1and2_elseEither_elseNeither,
+      var(--__cvat_3and4_elseEither_elseNeither)
+    )
+  );
+  --__cvat_5: initial;
+  --__cvat_6: initial;
+  --__cvat_5and6_elseNeither: var(--__cvat_5), var(--__cvat_6);
+  --__cvat_5and6_elseEither_elseNeither: var(--__cvat_5and6_elseNeither, var(--__cvat_5, var(--__cvat_6)));
+  --__cvat_7: initial;
+  --__cvat_8: initial;
+  --__cvat_7and8_elseNeither: var(--__cvat_7), var(--__cvat_8);
+  --__cvat_7and8_elseEither_elseNeither: var(--__cvat_7and8_elseNeither, var(--__cvat_7, var(--__cvat_8)));
+  --__cvat_5ao6and7ao8_elseNone: var(--__cvat_5and6_elseEither_elseNeither), var(--__cvat_7and8_elseEither_elseNeither);
+  --__cvat_5ao6and7ao8_elseEither_elseNone: var(
+    --__cvat_5ao6and7ao8_elseNone,
+    var(
+      --__cvat_5and6_elseEither_elseNeither,
+      var(--__cvat_7and8_elseEither_elseNeither)
+    )
+  );
+  --__cvat_some1to5andSome5to8_elseNone: var(--__cvat_1ao2and3ao4_elseEither_elseNone), var(--__cvat_5ao6and7ao8_elseEither_elseNone);
+  --counter-value-animation-timelines: var(
+    --__cvat_some1to5andSome5to8_elseNone,
+    var(
+      --__cvat_1ao2and3ao4_elseEither_elseNone,
+      var(--__cvat_5ao6and7ao8_elseEither_elseNone)
+    )
+  );
+
+  --__cva_1: initial;
+  --__cva_2: initial;
+  --__cva_1and2_elseNeither: var(--__cva_1), var(--__cva_2);
+  --__cva_1and2_elseEither_elseNeither: var(--__cva_1and2_elseNeither, var(--__cva_1, var(--__cva_2)));
+  --__cva_3: initial;
+  --__cva_4: initial;
+  --__cva_3and4_elseNeither: var(--__cva_3), var(--__cva_4);
+  --__cva_3and4_elseEither_elseNeither: var(--__cva_3and4_elseNeither, var(--__cva_3, var(--__cva_4)));
+  --__cva_1ao2and3ao4_elseNone: var(--__cva_1and2_elseEither_elseNeither), var(--__cva_3and4_elseEither_elseNeither);
+  --__cva_1ao2and3ao4_elseEither_elseNone: var(
+    --__cva_1ao2and3ao4_elseNone,
+    var(
+      --__cva_1and2_elseEither_elseNeither,
+      var(--__cva_3and4_elseEither_elseNeither)
+    )
+  );
+  --__cva_5: initial;
+  --__cva_6: initial;
+  --__cva_5and6_elseNeither: var(--__cva_5), var(--__cva_6);
+  --__cva_5and6_elseEither_elseNeither: var(--__cva_5and6_elseNeither, var(--__cva_5, var(--__cva_6)));
+  --__cva_7: initial;
+  --__cva_8: initial;
+  --__cva_7and8_elseNeither: var(--__cva_7), var(--__cva_8);
+  --__cva_7and8_elseEither_elseNeither: var(--__cva_7and8_elseNeither, var(--__cva_7, var(--__cva_8)));
+  --__cva_5ao6and7ao8_elseNone: var(--__cva_5and6_elseEither_elseNeither), var(--__cva_7and8_elseEither_elseNeither);
+  --__cva_5ao6and7ao8_elseEither_elseNone: var(
+    --__cva_5ao6and7ao8_elseNone,
+    var(
+      --__cva_5and6_elseEither_elseNeither,
+      var(--__cva_7and8_elseEither_elseNeither)
+    )
+  );
+  --__cva_some1to5andSome5to8_elseNone: var(--__cva_1ao2and3ao4_elseEither_elseNone), var(--__cva_5ao6and7ao8_elseEither_elseNone);
+  --counter-value-animations: var(
+    --__cva_some1to5andSome5to8_elseNone,
+    var(
+      --__cva_1ao2and3ao4_elseEither_elseNone,
+      var(--__cva_5ao6and7ao8_elseEither_elseNone)
+    )
+  );
+
+  --__cvar_1: initial;
+  --__cvar_2: initial;
+  --__cvar_1and2_elseNeither: var(--__cvar_1), var(--__cvar_2);
+  --__cvar_1and2_elseEither_elseNeither: var(--__cvar_1and2_elseNeither, var(--__cvar_1, var(--__cvar_2)));
+  --__cvar_3: initial;
+  --__cvar_4: initial;
+  --__cvar_3and4_elseNeither: var(--__cvar_3), var(--__cvar_4);
+  --__cvar_3and4_elseEither_elseNeither: var(--__cvar_3and4_elseNeither, var(--__cvar_3, var(--__cvar_4)));
+  --__cvar_1ao2and3ao4_elseNone: var(--__cvar_1and2_elseEither_elseNeither), var(--__cvar_3and4_elseEither_elseNeither);
+  --__cvar_1ao2and3ao4_elseEither_elseNone: var(
+    --__cvar_1ao2and3ao4_elseNone,
+    var(
+      --__cvar_1and2_elseEither_elseNeither,
+      var(--__cvar_3and4_elseEither_elseNeither)
+    )
+  );
+  --__cvar_5: initial;
+  --__cvar_6: initial;
+  --__cvar_5and6_elseNeither: var(--__cvar_5), var(--__cvar_6);
+  --__cvar_5and6_elseEither_elseNeither: var(--__cvar_5and6_elseNeither, var(--__cvar_5, var(--__cvar_6)));
+  --__cvar_7: initial;
+  --__cvar_8: initial;
+  --__cvar_7and8_elseNeither: var(--__cvar_7), var(--__cvar_8);
+  --__cvar_7and8_elseEither_elseNeither: var(--__cvar_7and8_elseNeither, var(--__cvar_7, var(--__cvar_8)));
+  --__cvar_5ao6and7ao8_elseNone: var(--__cvar_5and6_elseEither_elseNeither), var(--__cvar_7and8_elseEither_elseNeither);
+  --__cvar_5ao6and7ao8_elseEither_elseNone: var(
+    --__cvar_5ao6and7ao8_elseNone,
+    var(
+      --__cvar_5and6_elseEither_elseNeither,
+      var(--__cvar_7and8_elseEither_elseNeither)
+    )
+  );
+  --__cvar_some1to5andSome5to8_elseNone: var(--__cvar_1ao2and3ao4_elseEither_elseNone), var(--__cvar_5ao6and7ao8_elseEither_elseNone);
+  --counter-value-animation-ranges: var(
+    --__cvar_some1to5andSome5to8_elseNone,
+    var(
+      --__cvar_1ao2and3ao4_elseEither_elseNone,
+      var(--__cvar_5ao6and7ao8_elseEither_elseNone)
+    )
+  );
+
+  timeline-scope: var(--counter-value-animation-timelines, none);
+  animation: var(--counter-value-animations, none);
+  animation-timeline: var(--counter-value-animation-timelines, none);
+  animation-range: var(--counter-value-animation-ranges, none);
+}
+
+:has(> [data-counter-value=""]),
+:has(> [data-counter-value="1"]),
+:has(> [data-counter-value="1:on-nth-parent(1)"]),
+:has(> * > [data-counter-value="1:on-nth-parent(2)"]),
+:has(> * > * > [data-counter-value="1:on-nth-parent(3)"]),
+:has(> * > * > * > [data-counter-value="1:on-nth-parent(4)"]),
+:has(> * > * > * > * > [data-counter-value="1:on-nth-parent(5)"]) {
+  --__cvat_1: --counter-value_tl1;
+  --__cva_1: --counter-value_kf1 linear;
+  --__cvar_1: entry 100% exit 100%;
+}
+:has(> [data-counter-value="2"]),
+:has(> [data-counter-value="2:on-nth-parent(1)"]),
+:has(> * > [data-counter-value="2:on-nth-parent(2)"]),
+:has(> * > * > [data-counter-value="2:on-nth-parent(3)"]),
+:has(> * > * > * > [data-counter-value="2:on-nth-parent(4)"]),
+:has(> * > * > * > * > [data-counter-value="2:on-nth-parent(5)"]) {
+  --__cvat_2: --counter-value_tl2;
+  --__cva_2: --counter-value_kf2 linear;
+  --__cvar_2: entry 100% exit 100%;
+}
+:has(> [data-counter-value="3"]),
+:has(> [data-counter-value="3:on-nth-parent(1)"]),
+:has(> * > [data-counter-value="3:on-nth-parent(2)"]),
+:has(> * > * > [data-counter-value="3:on-nth-parent(3)"]),
+:has(> * > * > * > [data-counter-value="3:on-nth-parent(4)"]),
+:has(> * > * > * > * > [data-counter-value="3:on-nth-parent(5)"]) {
+  --__cvat_3: --counter-value_tl3;
+  --__cva_3: --counter-value_kf3 linear;
+  --__cvar_3: entry 100% exit 100%;
+}
+:has(> [data-counter-value="4"]),
+:has(> [data-counter-value="4:on-nth-parent(1)"]),
+:has(> * > [data-counter-value="4:on-nth-parent(2)"]),
+:has(> * > * > [data-counter-value="4:on-nth-parent(3)"]),
+:has(> * > * > * > [data-counter-value="4:on-nth-parent(4)"]),
+:has(> * > * > * > * > [data-counter-value="4:on-nth-parent(5)"]) {
+  --__cvat_4: --counter-value_tl4;
+  --__cva_4: --counter-value_kf4 linear;
+  --__cvar_4: entry 100% exit 100%;
+}
+:has(> [data-counter-value="5"]),
+:has(> [data-counter-value="5:on-nth-parent(1)"]),
+:has(> * > [data-counter-value="5:on-nth-parent(2)"]),
+:has(> * > * > [data-counter-value="5:on-nth-parent(3)"]),
+:has(> * > * > * > [data-counter-value="5:on-nth-parent(4)"]),
+:has(> * > * > * > * > [data-counter-value="5:on-nth-parent(5)"]) {
+  --__cvat_5: --counter-value_tl5;
+  --__cva_5: --counter-value_kf5 linear;
+  --__cvar_5: entry 100% exit 100%;
+}
+:has(> [data-counter-value="6"]),
+:has(> [data-counter-value="6:on-nth-parent(1)"]),
+:has(> * > [data-counter-value="6:on-nth-parent(2)"]),
+:has(> * > * > [data-counter-value="6:on-nth-parent(3)"]),
+:has(> * > * > * > [data-counter-value="6:on-nth-parent(4)"]),
+:has(> * > * > * > * > [data-counter-value="6:on-nth-parent(5)"]) {
+  --__cvat_6: --counter-value_tl6;
+  --__cva_6: --counter-value_kf6 linear;
+  --__cvar_6: entry 100% exit 100%;
+}
+:has(> [data-counter-value="7"]),
+:has(> [data-counter-value="7:on-nth-parent(1)"]),
+:has(> * > [data-counter-value="7:on-nth-parent(2)"]),
+:has(> * > * > [data-counter-value="7:on-nth-parent(3)"]),
+:has(> * > * > * > [data-counter-value="7:on-nth-parent(4)"]),
+:has(> * > * > * > * > [data-counter-value="7:on-nth-parent(5)"]) {
+  --__cvat_7: --counter-value_tl7;
+  --__cva_7: --counter-value_kf7 linear;
+  --__cvar_7: entry 100% exit 100%;
+}
+:has(> [data-counter-value="8"]),
+:has(> [data-counter-value="8:on-nth-parent(1)"]),
+:has(> * > [data-counter-value="8:on-nth-parent(2)"]),
+:has(> * > * > [data-counter-value="8:on-nth-parent(3)"]),
+:has(> * > * > * > [data-counter-value="8:on-nth-parent(4)"]),
+:has(> * > * > * > * > [data-counter-value="8:on-nth-parent(5)"]) {
+  --__cvat_8: --counter-value_tl8;
+  --__cva_8: --counter-value_kf8 linear;
+  --__cvar_8: entry 100% exit 100%;
+}
+
+[data-counter-value] {
+  visibility: hidden;
+  overflow: hidden;
+  width: 1200px;
+  height: 20px;
+  right: 100vw;
+  bottom: 100vh;
+  line-height: 0px;
+  letter-spacing: 0px;
+  background: lime;
+  &, &::before {
+    box-sizing: border-box;
+    position: absolute;
+    margin: 0px;
+    padding: 0px;
+    font-size: 0px;
+    font-family: monospace;
+  }
+  &::before {
+    content: counter(var(--counter), --counter-value);
+    letter-spacing: 10px;
+    line-height: 10px;
+    white-space: pre;
+    background: hotpink;
+  }
+}
+[data-counter-value=""]::before,
+[data-counter-value^="1"]::before { view-timeline: --counter-value_tl1 inline; }
+[data-counter-value^="2"]::before { view-timeline: --counter-value_tl2 inline; }
+[data-counter-value^="3"]::before { view-timeline: --counter-value_tl3 inline; }
+[data-counter-value^="4"]::before { view-timeline: --counter-value_tl4 inline; }
+[data-counter-value^="5"]::before { view-timeline: --counter-value_tl5 inline; }
+[data-counter-value^="6"]::before { view-timeline: --counter-value_tl6 inline; }
+[data-counter-value^="7"]::before { view-timeline: --counter-value_tl7 inline; }
+[data-counter-value^="8"]::before { view-timeline: --counter-value_tl8 inline; }
