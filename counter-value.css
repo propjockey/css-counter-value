@@ -22,20 +22,25 @@
 @keyframes --counter-value_kf8 { 0% { --counter-value\\8: 120; } 100% { --counter-value\\8: 0; } }
 
 :where(
-  :has(> [data-counter-value=""]),
-  :has(> [data-counter-value="1"]),
-  :has(> [data-counter-value="2"]),
-  :has(> [data-counter-value="3"]),
-  :has(> [data-counter-value="4"]),
-  :has(> [data-counter-value="5"]),
-  :has(> [data-counter-value="6"]),
-  :has(> [data-counter-value="7"]),
-  :has(> [data-counter-value="8"]),
-  :has(> [data-counter-value$=":on-nth-parent(1)"]),
-  :has(> * > [data-counter-value$=":on-nth-parent(2)"]),
-  :has(> * > * > [data-counter-value$=":on-nth-parent(3)"]),
-  :has(> * > * > * > [data-counter-value$=":on-nth-parent(4)"]),
-  :has(> * > * > * > * > [data-counter-value$=":on-nth-parent(5)"])
+  :has(> :is(
+    [data-counter-value=""]:not([data-counter-value*="host:1"] *),
+    [data-counter-value*="1"]:not([data-counter-value*="host:"], [data-counter-value*="host:1"] *),
+    [data-counter-value*="2"]:not([data-counter-value*="host:"], [data-counter-value*="host:2"] *),
+    [data-counter-value*="3"]:not([data-counter-value*="host:"], [data-counter-value*="host:3"] *),
+    [data-counter-value*="4"]:not([data-counter-value*="host:"], [data-counter-value*="host:4"] *),
+    [data-counter-value*="5"]:not([data-counter-value*="host:"], [data-counter-value*="host:5"] *),
+    [data-counter-value*="6"]:not([data-counter-value*="host:"], [data-counter-value*="host:6"] *),
+    [data-counter-value*="7"]:not([data-counter-value*="host:"], [data-counter-value*="host:7"] *),
+    [data-counter-value*="8"]:not([data-counter-value*="host:"], [data-counter-value*="host:8"] *)
+  )),
+  [data-counter-value*="host:1"]:has([data-counter-value=""], [data-counter-value*="1"]:not([data-counter-value*="host:"])),
+  [data-counter-value*="host:2"]:has([data-counter-value*="2"]:not([data-counter-value*="host:"])),
+  [data-counter-value*="host:3"]:has([data-counter-value*="3"]:not([data-counter-value*="host:"])),
+  [data-counter-value*="host:4"]:has([data-counter-value*="4"]:not([data-counter-value*="host:"])),
+  [data-counter-value*="host:5"]:has([data-counter-value*="5"]:not([data-counter-value*="host:"])),
+  [data-counter-value*="host:6"]:has([data-counter-value*="6"]:not([data-counter-value*="host:"])),
+  [data-counter-value*="host:7"]:has([data-counter-value*="7"]:not([data-counter-value*="host:"])),
+  [data-counter-value*="host:8"]:has([data-counter-value*="8"]:not([data-counter-value*="host:"]))
 ) {
   --__cvat_1: initial;
   --__cvat_2: initial;
@@ -166,89 +171,59 @@
   animation-range: var(--counter-value-animation-ranges, none);
 }
 
-:has(> [data-counter-value=""]),
-:has(> [data-counter-value="1"]),
-:has(> [data-counter-value="1:on-nth-parent(1)"]),
-:has(> * > [data-counter-value="1:on-nth-parent(2)"]),
-:has(> * > * > [data-counter-value="1:on-nth-parent(3)"]),
-:has(> * > * > * > [data-counter-value="1:on-nth-parent(4)"]),
-:has(> * > * > * > * > [data-counter-value="1:on-nth-parent(5)"]) {
+:has(> :is(
+  [data-counter-value=""]:not([data-counter-value*="host:1"] *),
+  [data-counter-value*="1"]:not([data-counter-value*="host:"], [data-counter-value*="host:1"] *)
+)),
+[data-counter-value*="host:1"]:has([data-counter-value=""], [data-counter-value*="1"]:not([data-counter-value*="host:"])) {
   --__cvat_1: --counter-value_tl1;
   --__cva_1: --counter-value_kf1 linear;
   --__cvar_1: entry 100% exit 100%;
 }
-:has(> [data-counter-value="2"]),
-:has(> [data-counter-value="2:on-nth-parent(1)"]),
-:has(> * > [data-counter-value="2:on-nth-parent(2)"]),
-:has(> * > * > [data-counter-value="2:on-nth-parent(3)"]),
-:has(> * > * > * > [data-counter-value="2:on-nth-parent(4)"]),
-:has(> * > * > * > * > [data-counter-value="2:on-nth-parent(5)"]) {
+:has(> [data-counter-value*="2"]:not([data-counter-value*="host:"], [data-counter-value*="host:2"] *)),
+[data-counter-value*="host:2"]:has([data-counter-value*="2"]:not([data-counter-value*="host:"])) {
   --__cvat_2: --counter-value_tl2;
   --__cva_2: --counter-value_kf2 linear;
   --__cvar_2: entry 100% exit 100%;
 }
-:has(> [data-counter-value="3"]),
-:has(> [data-counter-value="3:on-nth-parent(1)"]),
-:has(> * > [data-counter-value="3:on-nth-parent(2)"]),
-:has(> * > * > [data-counter-value="3:on-nth-parent(3)"]),
-:has(> * > * > * > [data-counter-value="3:on-nth-parent(4)"]),
-:has(> * > * > * > * > [data-counter-value="3:on-nth-parent(5)"]) {
+:has(> [data-counter-value*="3"]:not([data-counter-value*="host:"], [data-counter-value*="host:3"] *)),
+[data-counter-value*="host:3"]:has([data-counter-value*="3"]:not([data-counter-value*="host:"])) {
   --__cvat_3: --counter-value_tl3;
   --__cva_3: --counter-value_kf3 linear;
   --__cvar_3: entry 100% exit 100%;
 }
-:has(> [data-counter-value="4"]),
-:has(> [data-counter-value="4:on-nth-parent(1)"]),
-:has(> * > [data-counter-value="4:on-nth-parent(2)"]),
-:has(> * > * > [data-counter-value="4:on-nth-parent(3)"]),
-:has(> * > * > * > [data-counter-value="4:on-nth-parent(4)"]),
-:has(> * > * > * > * > [data-counter-value="4:on-nth-parent(5)"]) {
+:has(> [data-counter-value*="4"]:not([data-counter-value*="host:"], [data-counter-value*="host:4"] *)),
+[data-counter-value*="host:4"]:has([data-counter-value*="4"]:not([data-counter-value*="host:"])) {
   --__cvat_4: --counter-value_tl4;
   --__cva_4: --counter-value_kf4 linear;
   --__cvar_4: entry 100% exit 100%;
 }
-:has(> [data-counter-value="5"]),
-:has(> [data-counter-value="5:on-nth-parent(1)"]),
-:has(> * > [data-counter-value="5:on-nth-parent(2)"]),
-:has(> * > * > [data-counter-value="5:on-nth-parent(3)"]),
-:has(> * > * > * > [data-counter-value="5:on-nth-parent(4)"]),
-:has(> * > * > * > * > [data-counter-value="5:on-nth-parent(5)"]) {
+:has(> [data-counter-value*="5"]:not([data-counter-value*="host:"], [data-counter-value*="host:5"] *)),
+[data-counter-value*="host:5"]:has([data-counter-value*="5"]:not([data-counter-value*="host:"])) {
   --__cvat_5: --counter-value_tl5;
   --__cva_5: --counter-value_kf5 linear;
   --__cvar_5: entry 100% exit 100%;
 }
-:has(> [data-counter-value="6"]),
-:has(> [data-counter-value="6:on-nth-parent(1)"]),
-:has(> * > [data-counter-value="6:on-nth-parent(2)"]),
-:has(> * > * > [data-counter-value="6:on-nth-parent(3)"]),
-:has(> * > * > * > [data-counter-value="6:on-nth-parent(4)"]),
-:has(> * > * > * > * > [data-counter-value="6:on-nth-parent(5)"]) {
+:has(> [data-counter-value*="6"]:not([data-counter-value*="host:"], [data-counter-value*="host:6"] *)),
+[data-counter-value*="host:6"]:has([data-counter-value*="6"]:not([data-counter-value*="host:"])) {
   --__cvat_6: --counter-value_tl6;
   --__cva_6: --counter-value_kf6 linear;
   --__cvar_6: entry 100% exit 100%;
 }
-:has(> [data-counter-value="7"]),
-:has(> [data-counter-value="7:on-nth-parent(1)"]),
-:has(> * > [data-counter-value="7:on-nth-parent(2)"]),
-:has(> * > * > [data-counter-value="7:on-nth-parent(3)"]),
-:has(> * > * > * > [data-counter-value="7:on-nth-parent(4)"]),
-:has(> * > * > * > * > [data-counter-value="7:on-nth-parent(5)"]) {
+:has(> [data-counter-value*="7"]:not([data-counter-value*="host:"], [data-counter-value*="host:7"] *)),
+[data-counter-value*="host:7"]:has([data-counter-value*="7"]:not([data-counter-value*="host:"])) {
   --__cvat_7: --counter-value_tl7;
   --__cva_7: --counter-value_kf7 linear;
   --__cvar_7: entry 100% exit 100%;
 }
-:has(> [data-counter-value="8"]),
-:has(> [data-counter-value="8:on-nth-parent(1)"]),
-:has(> * > [data-counter-value="8:on-nth-parent(2)"]),
-:has(> * > * > [data-counter-value="8:on-nth-parent(3)"]),
-:has(> * > * > * > [data-counter-value="8:on-nth-parent(4)"]),
-:has(> * > * > * > * > [data-counter-value="8:on-nth-parent(5)"]) {
+:has(> [data-counter-value*="8"]:not([data-counter-value*="host:"], [data-counter-value*="host:8"] *)),
+[data-counter-value*="host:8"]:has([data-counter-value*="8"]:not([data-counter-value*="host:"])) {
   --__cvat_8: --counter-value_tl8;
   --__cva_8: --counter-value_kf8 linear;
   --__cvar_8: entry 100% exit 100%;
 }
 
-[data-counter-value] {
+[data-counter-value]:not([data-counter-value*="host:"]) {
   visibility: hidden;
   overflow: hidden;
   width: 1200px;
@@ -256,7 +231,6 @@
   right: 100vw;
   bottom: 100vh;
   line-height: 0px;
-  text-align: left;
   letter-spacing: 0px;
   background: lime;
   &, &::before {
@@ -272,15 +246,62 @@
     letter-spacing: 10px;
     line-height: 10px;
     white-space: pre;
+    left: 0px;
+    top: 0px;
     background: hotpink;
   }
 }
+
+:where([data-counter-value]:not([data-counter-value*="host:"]))::before {
+  --__cvvt_1: initial;
+  --__cvvt_2: initial;
+  --__cvvt_1and2_elseNeither: var(--__cvvt_1), var(--__cvvt_2);
+  --__cvvt_1and2_elseEither_elseNeither: var(--__cvvt_1and2_elseNeither, var(--__cvvt_1, var(--__cvvt_2)));
+  --__cvvt_3: initial;
+  --__cvvt_4: initial;
+  --__cvvt_3and4_elseNeither: var(--__cvvt_3), var(--__cvvt_4);
+  --__cvvt_3and4_elseEither_elseNeither: var(--__cvvt_3and4_elseNeither, var(--__cvvt_3, var(--__cvvt_4)));
+  --__cvvt_1ao2and3ao4_elseNone: var(--__cvvt_1and2_elseEither_elseNeither), var(--__cvvt_3and4_elseEither_elseNeither);
+  --__cvvt_1ao2and3ao4_elseEither_elseNone: var(
+    --__cvvt_1ao2and3ao4_elseNone,
+    var(
+      --__cvvt_1and2_elseEither_elseNeither,
+      var(--__cvvt_3and4_elseEither_elseNeither)
+    )
+  );
+  --__cvvt_5: initial;
+  --__cvvt_6: initial;
+  --__cvvt_5and6_elseNeither: var(--__cvvt_5), var(--__cvvt_6);
+  --__cvvt_5and6_elseEither_elseNeither: var(--__cvvt_5and6_elseNeither, var(--__cvvt_5, var(--__cvvt_6)));
+  --__cvvt_7: initial;
+  --__cvvt_8: initial;
+  --__cvvt_7and8_elseNeither: var(--__cvvt_7), var(--__cvvt_8);
+  --__cvvt_7and8_elseEither_elseNeither: var(--__cvvt_7and8_elseNeither, var(--__cvvt_7, var(--__cvvt_8)));
+  --__cvvt_5ao6and7ao8_elseNone: var(--__cvvt_5and6_elseEither_elseNeither), var(--__cvvt_7and8_elseEither_elseNeither);
+  --__cvvt_5ao6and7ao8_elseEither_elseNone: var(
+    --__cvvt_5ao6and7ao8_elseNone,
+    var(
+      --__cvvt_5and6_elseEither_elseNeither,
+      var(--__cvvt_7and8_elseEither_elseNeither)
+    )
+  );
+  --__cvvt_some1to4andSome5to8_elseNone: var(--__cvvt_1ao2and3ao4_elseEither_elseNone), var(--__cvvt_5ao6and7ao8_elseEither_elseNone);
+  --counter-value-view-timelines: var(
+    --__cvvt_some1to4andSome5to8_elseNone,
+    var(
+      --__cvvt_1ao2and3ao4_elseEither_elseNone,
+      var(--__cvvt_5ao6and7ao8_elseEither_elseNone)
+    )
+  );
+  view-timeline: var(--counter-value-view-timelines);
+}
+
 [data-counter-value=""]::before,
-[data-counter-value^="1"]::before { view-timeline: --counter-value_tl1 inline; }
-[data-counter-value^="2"]::before { view-timeline: --counter-value_tl2 inline; }
-[data-counter-value^="3"]::before { view-timeline: --counter-value_tl3 inline; }
-[data-counter-value^="4"]::before { view-timeline: --counter-value_tl4 inline; }
-[data-counter-value^="5"]::before { view-timeline: --counter-value_tl5 inline; }
-[data-counter-value^="6"]::before { view-timeline: --counter-value_tl6 inline; }
-[data-counter-value^="7"]::before { view-timeline: --counter-value_tl7 inline; }
-[data-counter-value^="8"]::before { view-timeline: --counter-value_tl8 inline; }
+[data-counter-value*="1"]:not([data-counter-value*="host:"])::before { --__cvvt_1: --counter-value_tl1 inline; }
+[data-counter-value*="2"]:not([data-counter-value*="host:"])::before { --__cvvt_2: --counter-value_tl2 inline; }
+[data-counter-value*="3"]:not([data-counter-value*="host:"])::before { --__cvvt_3: --counter-value_tl3 inline; }
+[data-counter-value*="4"]:not([data-counter-value*="host:"])::before { --__cvvt_4: --counter-value_tl4 inline; }
+[data-counter-value*="5"]:not([data-counter-value*="host:"])::before { --__cvvt_5: --counter-value_tl5 inline; }
+[data-counter-value*="6"]:not([data-counter-value*="host:"])::before { --__cvvt_6: --counter-value_tl6 inline; }
+[data-counter-value*="7"]:not([data-counter-value*="host:"])::before { --__cvvt_7: --counter-value_tl7 inline; }
+[data-counter-value*="8"]:not([data-counter-value*="host:"])::before { --__cvvt_8: --counter-value_tl8 inline; }
