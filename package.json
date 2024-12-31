@@ -1,6 +1,6 @@
 {
   "name": "css-counter-value",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Convert CSS counter() values to integers without JavaScript",
   "main": "counter-value.css",
   "scripts": {
